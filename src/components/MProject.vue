@@ -20,7 +20,12 @@ withDefaults(defineProps<Props>(), {
   <div>
     <h3>{<span class="title">{{ title }}</span><span class="suffix">{{ suffix }}</span>} <span v-if="year" class="year">{{ year }}</span></h3>
     <p><slot></slot></p>
-    <m-link :href="link" external>Open↗</m-link> <m-link v-if="github" :href="github" external>GitHub↗</m-link>
+    <m-link 
+      :href="link" 
+      external
+    >
+      Open↗
+    </m-link> <m-link v-if="github" :href="'https://github.com/' + github" external> GitHub↗ </m-link>
   </div>
 </template>
 

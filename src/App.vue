@@ -3,6 +3,7 @@ import 'normalize.css'
 
 import MTitle   from './components/MTitle.vue'
 import MFrame   from './components/MFrame.vue'
+import MLink    from './components/MLink.vue'
 import MProject from './components/MProject.vue'
 </script>
 
@@ -12,15 +13,19 @@ import MProject from './components/MProject.vue'
   <m-frame>
     <div>
       <h2>Professional <br>Work</h2>
+
       <m-project title="ERGO RISE" link="https://kandidat.ergo.flynne.de" :year="2021">
         backend API, recruiter dashboard and the candidate dashboard
       </m-project>
+
       <m-project title="Brandmonks Media" link="https://bm.media" :year="2021">
         frontend and effects
       </m-project>
+
       <m-project title="flynne" link="https://flynne.de" :year="2020">
         backend API, recruiter dashboard and landing page
       </m-project>
+
       <m-project title="TXT Performer" link="https://txtperformer.com" :year="2018">
         backend and frontend from scratch 
       </m-project>
@@ -30,18 +35,55 @@ import MProject from './components/MProject.vue'
   <m-frame>
     <div>
       <h2>Personal <br>Projects</h2>
-      <m-project title="marimilch" suffix="de" link="https://kandidat.ergo.flynne.de" :year="2021">
-        backend API, recruiter dashboard and the candidate dashboard
+
+      <m-project 
+        title="marian" 
+        suffix="sh" 
+        link="https://marian.sh" 
+        github="marimilch/marian.sh"
+        :year="2022"
+      >
+        design, programming, effects
       </m-project>
-      <m-project title="Brandmonks Media" link="https://bm.media" :year="2021">
-        frontend and effects
+
+      <m-project 
+        title="marimilch" 
+        suffix="de" 
+        link="https://marimilch.de" 
+        github="marimilch/marimilch.de"
+        :year="2021"
+      >
+        design, programming, effects
       </m-project>
-      <m-project title="flynne" link="https://flynne.de" :year="2020">
-        backend API, recruiter dashboard and landing page
-      </m-project>
-      <m-project title="TXT Performer" link="https://txtperformer.com" :year="2018">
-        backend and frontend from scratch 
-      </m-project>
+      
+    </div>
+  </m-frame>
+
+  <m-frame>
+    <div>
+      <h2>About Me</h2>
+
+      <p>
+        I'm a graduate in computer science and I really 
+        enjoy programming and anything involving creativity. 
+        I currently live in Mainz a little outside of the city.
+        Other hobbies of mine are making music, participating 
+        at Musical Inc. and meeting friends.
+      </p>
+
+      <br>
+
+      <m-link 
+        href="https://www.linkedin.com/in/marian-amiragov/" 
+        external
+      >
+        LinkedIn↗
+      </m-link> <m-link href="https://github.com/marimilch" external> GitHub↗ </m-link>
+
+      <br>
+      <br>
+
+      <m-link href="https://github.com/marimilch/unity-xpbd-jakobsen-cable" external> Thesis↗ </m-link>
     </div>
   </m-frame>
 </template>
@@ -69,6 +111,8 @@ body {
   background: $background;
 
   color: $neutral;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.125);
+
 }
 h1, h2 {
   font-family: Major Mono Display, monospace;
