@@ -21,8 +21,6 @@ export default {
         className: 'letter',
       })
 
-      console.log('props', props)
-
       const ls = root_.querySelectorAll('.letter')
 
       for (const l of Array.from(ls)){

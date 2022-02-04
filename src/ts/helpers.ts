@@ -6,3 +6,9 @@ export function applyProps(from: LooseObject, to: LooseObject): void
     to[prop] = from[prop]
   }
 }
+
+export function wait(delay: number) {
+  return new Promise( (resolve: Function) => {
+    setTimeout(resolve, delay);
+  });
+}

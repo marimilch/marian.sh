@@ -1,0 +1,90 @@
+<script setup lang="ts">
+import { defineProps, computed, ref, defineEmits } from 'vue'
+import { wait } from '../ts/helpers'
+import EnterIcon from './icons/Enter.vue'
+
+import OnVisible from './OnVisible.vue'
+import BlinkCursor from './BlinkCursor.vue'
+
+interface Props {
+  text: string,
+  startDelay?: number,
+  charDelay?: number,
+  endDelay?: number,
+  disappearDelay?: number,
+  showCursor?: boolean,
+  showEnter?: boolean,
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  startDelay: 500,
+  charDelay: 50,
+  endDelay: 500,
+  disappearDelay: 500,
+  showCursor: true,
+  showEnter: true,
+})
+
+const emit = defineEmits(['initialized', 'animationBegin', 'animationDone', 'enterPressed'])
+
+let len = ref(0)
+let done = ref(false)
+let typingStarted = computed( () => len.value > 0 )
+let visibleBlink = ref(true)
+let currentText = computed( () => props.text.slice(0, len.value) )
+
+async function run() {
+  emit('initialized')
+  await wait(props.startDelay)
+  emit('animationBegin')
+  while (len.value < props.text.length) {
+    await wait(props.charDelay)
+    len.value += 1
+  }
+  await wait(props.endDelay)
+  done.value = true
+  emit('enterPressed')
+  await wait(props.disappearDelay)
+  visibleBlink.value = false
+  emit('animationDone')
+}
+
+function reset() {
+  done.value = false
+  visibleBlink.value = true
+  len.value = 0
+}
+</script>
+
+<template>
+<div>
+  <on-visible @on-visible="run" @on-hidden="reset">
+    <span v-if="!typingStarted" class="placeholder opacity-0 inline-block w-0">a</span>
+    <span class="text-highlight2">{{ currentText }}</span>
+    <enter-icon v-if="done && showEnter" class="enter-icon inline h-4" />
+    <br v-if="done"/>
+    <blink-cursor
+      v-if="showCursor"
+      :font-height="22" 
+      class="absolute pointer-none" 
+      :class="visibleBlink ? '' : 'bg-transparent'"
+    />       
+  </on-visible>
+</div>
+</template>
+
+<style scoped>
+@keyframes disappear {
+  from {
+    opacity: .5;
+  }
+  to {
+    opacity: 0;
+  }
+}
+  .enter-icon {
+    animation: disappear .5s ease 1 normal; 
+    opacity: 0;
+  }
+</style>
+
