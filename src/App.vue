@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import 'normalize.css'
+import './index.css'
 
-import MTitle   from './components/MTitle.vue'
-import MFrame   from './components/MFrame.vue'
-import MLink    from './components/MLink.vue'
-import MProject from './components/MProject.vue'
+import MTitle           from './components/MTitle.vue'
+import MFrame           from './components/MFrame.vue'
+import MLink            from './components/MLink.vue'
+import MProject         from './components/MProject.vue'
+import Lerpy            from './components/Lerpy.vue'
 </script>
 
 <template>
@@ -61,29 +63,38 @@ import MProject from './components/MProject.vue'
 
   <m-frame>
     <div>
-      <h2>About Me</h2>
+      <lerpy style="display:inline-block" childStyle="display:inline-block">
+        <h2>About Me</h2>
+      </lerpy>
 
-      <p>
-        I'm a graduate in computer science and I really 
-        enjoy programming and anything involving creativity. 
-        I currently live in Mainz a little outside of the city.
-        Other hobbies of mine are making music, participating 
-        at Musical Inc. and meeting friends.
-      </p>
-
-      <br>
-
-      <m-link 
-        href="https://www.linkedin.com/in/marian-amiragov/" 
-        external
-      >
-        LinkedIn↗
-      </m-link> <m-link href="https://github.com/marimilch" external> GitHub↗ </m-link>
+      <lerpy style="display:inline-block" childStyle="display:inline-block" :lerp-speed="4">
+        <p>
+          I'm a graduate in computer science and I really 
+          enjoy programming and anything involving creativity. 
+          I currently live in Mainz a little outside of the city.
+          Other hobbies of mine are making music, participating 
+          at Musical Inc. and meeting friends.
+        </p>
+      </lerpy>
 
       <br>
+
+      <lerpy style="display:inline-block" childStyle="display:inline-block" :lerp-speed="3.5">
+        <m-link 
+          href="https://www.linkedin.com/in/marian-amiragov/" 
+          external
+        >
+          LinkedIn↗
+          
+        </m-link>
+      </lerpy> <lerpy style="display:inline-block" childStyle="display:inline-block" :lerp-speed="3">
+        <m-link href="https://github.com/marimilch" external> GitHub↗ </m-link>
+      </lerpy>
+
+      <br>
       <br>
 
-      <m-link href="https://github.com/marimilch/unity-xpbd-jakobsen-cable" external> Thesis↗ </m-link>
+      <m-link href="https://raw.githubusercontent.com/marimilch/unity-xpbd-jakobsen-cable/main/Bachelor_Thesis_Marian_Amiragov.pdf" external> Thesis↗ </m-link>
     </div>
   </m-frame>
 </template>
@@ -110,11 +121,18 @@ body {
   line-height: 23px;
   background: $background;
 
+  display: flex;
+  justify-content: center;
+
   color: $neutral;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.125);
-
 }
-h1, h2 {
+#app {
+  max-width: 800px;
+  background: repeating-linear-gradient(180deg, $highlight1 0, $highlight1 1px, transparent 1px, transparent 100px) 100% / 40px 100px repeat-y,
+    repeating-linear-gradient(180deg, $neutral 0, $neutral 1px, transparent 1px, transparent 20px) 100% / 20px 100px repeat-y,
+}
+h1, h2, .h1, .h2 {
   font-family: Major Mono Display, monospace;
   font-style: normal;
   font-weight: normal;
@@ -127,11 +145,11 @@ h1, h2 {
     color: $highlight1;
   }
 }
-h1 {
+h1, .h1 {
   font-size: 36px;
   line-height: 36px;
 }
-h2 {
+h2, .h2 {
   font-size: 24px;
   line-height: 24px;
 }

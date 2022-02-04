@@ -23,6 +23,7 @@ a {
   background: transparent;
   transition: font-weight .4s ease,
               background  .2s ease,
+              box-shadow  .2s ease,
               color       .2s ease;
   text-decoration: none;
 
@@ -37,6 +38,7 @@ a {
     font-weight: 900;
     font-style: italic;
     background: $highlight1;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.125);
     color: $background;
   }
 }

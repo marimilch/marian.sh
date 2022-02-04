@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import MLink from './MLink.vue'
+import Lerpy from './Lerpy.vue'
 
 interface Props {
   title: string
@@ -17,7 +18,7 @@ withDefaults(defineProps<Props>(), {
 </script>
 
 <template>
-  <div>
+  <div class="project">
     <h3>{<span class="title">{{ title }}</span><span class="suffix">{{ suffix }}</span>} <span v-if="year" class="year">{{ year }}</span></h3>
     <p><slot></slot></p>
     <m-link 
@@ -25,13 +26,14 @@ withDefaults(defineProps<Props>(), {
       external
     >
       Open↗
-    </m-link> <m-link v-if="github" :href="'https://github.com/' + github" external> GitHub↗ </m-link>
+    </m-link>
+    <m-link v-if="github" :href="'https://github.com/' + github" external> GitHub↗ </m-link>
   </div>
 </template>
 
 <style lang="scss" scoped>
 @import '../vars.scss';
-div {
+.project {
   width: 100%;
   margin-bottom: 40px;
 }
