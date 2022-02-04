@@ -57,20 +57,20 @@ function reset() {
 </script>
 
 <template>
-<div>
-  <on-visible @on-visible="run" @on-hidden="reset">
+<span>
+  <on-visible @on-visible="run" @on-hidden="reset" class="inline">
     <span v-if="!typingStarted" class="placeholder opacity-0 inline-block w-0">a</span>
-    <span class="text-highlight2">{{ currentText }}</span>
-    <enter-icon v-if="done && showEnter" class="enter-icon inline h-4" />
-    <br v-if="done"/>
+    <span>{{ currentText }}</span>
+    <enter-icon v-if="done && showEnter" class="enter-icon inline h-4 text-neutral" />
+    <br v-if="done && showEnter"/>
     <blink-cursor
       v-if="showCursor"
       :font-height="22" 
-      class="absolute pointer-none" 
+      class="absolute pointer-none transition-colors" 
       :class="visibleBlink ? '' : 'bg-transparent'"
     />       
   </on-visible>
-</div>
+</span>
 </template>
 
 <style scoped>

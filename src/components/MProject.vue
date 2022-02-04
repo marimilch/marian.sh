@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import MLink from './MLink.vue'
-import Lerpy from './Lerpy.vue'
+import CodeAppearProject from './CodeAppearProject.vue';
+import CodeAppear from './CodeAppear.vue';
 
 interface Props {
   title: string
   link: string
+  description: string
   suffix?: string
   github?: string | null
   year?: number | null
@@ -16,20 +18,6 @@ withDefaults(defineProps<Props>(), {
   year: null,
 })
 </script>
-
-<template>
-  <div class="project">
-    <h3>{<span class="title">{{ title }}</span><span class="suffix">{{ suffix }}</span>} <span v-if="year" class="year">{{ year }}</span></h3>
-    <p><slot></slot></p>
-    <m-link 
-      :href="link" 
-      external
-    >
-      Open↗
-    </m-link>
-    <m-link v-if="github" :href="'https://github.com/' + github" external> GitHub↗ </m-link>
-  </div>
-</template>
 
 <style lang="scss" scoped>
 @import '../vars.scss';
@@ -55,3 +43,18 @@ span {
   text-transform: none;
 }
 </style>
+
+<template>
+  <div class="project">
+    <h3>{<span class="title"><code-appear-project :text="title"/></span><span class="suffix"><code-appear-project :text="suffix"/></span>} <span v-if="year" class="year"><code-appear-project :text="year.toString()"/></span></h3>
+    <p><code-appear :char-delay="10" :show-enter="false" :text="description"/></p>
+
+    <m-link :href="link" external>
+      <code-appear-project text=" OPEN↗ "/>
+    </m-link>
+
+    <m-link v-if="github" :href="'https://github.com/' + github" external>
+      <code-appear-project text=" GITHUB↗ "/>
+    </m-link>
+  </div>
+</template>

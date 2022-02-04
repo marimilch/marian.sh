@@ -1,6 +1,6 @@
 {
   "name": "marian.sh",
-  "version": "0.0.0",
+  "version": "0.5.0",
   "scripts": {
     "dev": "vite",
     "devn": "vite --host",

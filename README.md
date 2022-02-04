@@ -1,6 +1,7 @@
 # marian.sh
 
 Source code to my website. As raw of a Vue 3 + Typescript + Vite project as it could be. <3
+Checkt it out here [marian.sh ↗](https://marian.sh)
 
 ## Ideas
 
