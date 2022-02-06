@@ -15,6 +15,7 @@ interface Props {
   showCursor?: boolean,
   showEnter?: boolean,
   reservePlace?: boolean,
+  charStep?: number,
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -25,6 +26,7 @@ const props = withDefaults(defineProps<Props>(), {
   showCursor: true,
   showEnter: true,
   reservePlace: true,
+  charStep: 1,
 })
 
 const emit = defineEmits(['initialized', 'animationBegin', 'animationDone', 'enterPressed'])
@@ -41,7 +43,11 @@ async function run() {
   emit('animationBegin')
   while (len.value < props.text.length) {
     await wait(props.charDelay)
-    len.value += 1
+    if (len.value + props.charStep >= props.text.length) {
+      len.value = props.text.length
+      continue
+    }
+    len.value += props.charStep
   }
   await wait(props.endDelay)
   done.value = true
@@ -69,7 +75,7 @@ function reset() {
         {{ text }}<enter-icon v-if="showEnter" class="enter-icon inline h-4 text-neutral" />
       </span>
       <span :class="reservePlace ? 'absolute top-0 left-0' : ''">
-        {{ currentText }}<enter-icon v-if="done && showEnter" class="enter-icon inline h-4 text-neutral" /><br 
+        {{ currentText }}<enter-icon v-if="done && showEnter" class="mt-1.5 absolute enter-icon inline h-4 text-neutral" /><br 
           v-if="done && showEnter"
         /><blink-cursor
           v-if="showCursor"

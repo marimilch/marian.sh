@@ -88,7 +88,8 @@ import CodeAppearProject from './components/CodeAppearProject.vue'
       </header-animated>
 
       <code-appear
-        :char-delay="10"
+        :char-delay="20"
+        :char-step="4"
         text="I'm a graduate in computer science and I really 
           enjoy programming and anything involving creativity. 
           I currently live in Mainz a little outside of the city.
