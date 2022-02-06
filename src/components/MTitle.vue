@@ -41,6 +41,8 @@ import Pulse from './Pulse.vue'
               class="text-highlight2"
               :start-delay="2500"
               text="↓ scroll ↓"
+              :show-cursor="false"
+              :show-enter="false"
             />
           </pulse>
         </div>

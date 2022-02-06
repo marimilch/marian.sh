@@ -43,9 +43,7 @@ import CodeAppearProject from './components/CodeAppearProject.vue'
         :year="2020"
         :tags="['vue2', 'wordpress', 'laravel5']"
         description="backend API, recruiter dashboard and landing page."
-      >
-        
-      </m-project>
+      />
 
       <m-project 
         title="TXT Performer" 

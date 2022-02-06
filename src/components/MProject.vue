@@ -59,13 +59,14 @@ span {
 
 <template>
   <div class="project">
-    <h3>{<span class="title"><code-appear-project :text="title"/></span><span class="suffix"><code-appear-project :text="suffix"/></span>} <span v-if="year" class="year"><code-appear :show-enter="false" :text="year.toString()"/></span></h3>
+    <h3>{<span class="title"><code-appear-project :text="title"/></span><span class="suffix"><code-appear-project :text="suffix"/></span>} <span v-if="year" class="year"><code-appear :show-cursor="false" :show-enter="false" :text="year.toString()"/></span></h3>
     <p><code-appear :char-delay="10" :show-enter="false" :text="description" :reserve-space="true"/></p>
     <p>
       <code-appear 
         class="text-neutral opacity-50 font-normal tags" 
         :char-delay="20" 
         :show-enter="false" 
+        :show-cursor="false"
         :text="tagsAsString"
       />
     </p>
