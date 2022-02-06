@@ -18,7 +18,7 @@ withDefaults(defineProps<Props>(), {
 @import '../vars.scss';
 a {
   text-transform: uppercase;
-  color: $highlight1;
+  color: var(--highlight1);
   font-variation-settings: 'wght' 400;
   background: transparent;
   transition: font-variation-settings .4s ease,
@@ -37,9 +37,9 @@ a {
   &:active, &:hover {
     font-variation-settings: 'wght' 900;
     font-style: italic;
-    background: $highlight1;
+    background: var(--highlight1);
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.125);
-    color: $background;
+    color: var(--d-background);
   }
 }
 </style>

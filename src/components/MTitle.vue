@@ -25,7 +25,7 @@ import Pulse from './Pulse.vue'
           <code-appear class="text-highlight2" text="marian.sh"/>
           <div>
             <header-animated :appear-delay="1700">
-              <h1><span>hi, I'm </span><br><span>Marian</span><span> <br>and I <br>develop <br></span><span>Software</span></h1>
+              <h1 class="text-neutral"><span>hi, I'm </span><br><span>Marian</span><span> <br>and I <br>develop <br></span><span>Software</span></h1>
             </header-animated>
           </div>
         </div>
@@ -52,6 +52,10 @@ import Pulse from './Pulse.vue'
 </template>
 
 <style scoped>
+h1 {
+  font-size: 36px;
+  line-height: 36px;
+}
 div {
   width: 100%;
 }

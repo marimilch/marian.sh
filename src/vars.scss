@@ -1,4 +1,14 @@
-$background: #eeeeee;
-$neutral: #454545;
-$highlight1: #FF00B8;
-$highlight2: #00C2FF;
+:root {
+  --background: #eeeeee;
+  --neutral: #454545;
+  --highlight1: #FF00B8;
+  --highlight2: #00C2FF;
+
+  --d-background: var(--background);
+  --d-neutral: var(--neutral);
+
+  @media (prefers-color-scheme: dark) {
+    --d-background: #252525;
+    --d-neutral: var(--background);
+  }
+}

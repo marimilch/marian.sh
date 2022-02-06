@@ -45,12 +45,12 @@ h3 {
 }
 .title {
   &::after {
-    color: $highlight1;
+    color: var(--highlight1);
     content: '.';
   }
 }
 .year {
-  color: $highlight2;
+  color: var(--highlight2);
 }
 span {
   text-transform: none;
@@ -59,7 +59,7 @@ span {
 
 <template>
   <div class="project">
-    <h3>{<span class="title"><code-appear-project :text="title"/></span><span class="suffix"><code-appear-project :text="suffix"/></span>} <span v-if="year" class="year"><code-appear :show-cursor="false" :show-enter="false" :text="year.toString()"/></span></h3>
+    <h3 class="font-bold">{<span class="title"><code-appear-project :text="title"/></span><span class="suffix"><code-appear-project :text="suffix"/></span>} <span v-if="year" class="year"><code-appear :show-cursor="false" :show-enter="false" :text="year.toString()"/></span></h3>
     <p><code-appear :char-delay="10" :show-enter="false" :text="description" :reserve-space="true"/></p>
     <p>
       <code-appear 

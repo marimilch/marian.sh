@@ -5,8 +5,8 @@ module.exports = {
       colors: { 
         'highlight1': '#FF00B8',
         'highlight2': '#00C2FF',
-        'neutral':    '#454545',
-        'background': '#243c5a', 
+        'neutral':    'var(--d-neutral)',
+        'background': 'var(--d-background)', 
       },
     },
   },
