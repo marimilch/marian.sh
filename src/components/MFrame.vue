@@ -6,7 +6,7 @@
 
 <style scoped>
 div {
-  padding: 30px 50px 30px 30px;
+  padding: 30px 40px;
   min-height: 800px;
   display: flex;
   align-items: center;

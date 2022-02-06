@@ -9,9 +9,7 @@ withDefaults(defineProps<Props>(), {
 </script>
 
 <template>
-<a :target="external ? '_blank' : ''">
-  <slot></slot>
-</a>
+<a class="cursor-pointer" :target="external ? '_blank' : ''"> <slot></slot> </a>
 </template>
 
 <style lang="scss" scoped>

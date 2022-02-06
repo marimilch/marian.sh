@@ -1,25 +1,21 @@
 <script setup lang="ts">
-import 'normalize.css'
 import './index.css'
 
 import MTitle           from './components/MTitle.vue'
 import MFrame           from './components/MFrame.vue'
 import MLink            from './components/MLink.vue'
 import MProject         from './components/MProject.vue'
-import Lerpy            from './components/Lerpy.vue'
-import HeaderAnimated from './components/HeaderAnimated.vue'
 import CodeAppear from './components/CodeAppear.vue'
 import CodeAppearProject from './components/CodeAppearProject.vue'
+import AnchoredHeader from './components/AnchoredHeader.vue'
 </script>
 
 <template>
   <m-title></m-title>
 
-  <m-frame>
+  <m-frame class="professional-projects">
     <div>
-      <header-animated>
-        <h2>Professional <br>Work</h2>
-      </header-animated>
+      <anchored-header id="professional-work">Professional <br>Work</anchored-header>
 
       <m-project 
         title="ERGO RISE" 
@@ -58,9 +54,7 @@ import CodeAppearProject from './components/CodeAppearProject.vue'
 
   <m-frame>
     <div>
-      <header-animated>
-        <h2>Personal <br>Projects</h2>
-      </header-animated>
+      <anchored-header id="personal-projects">Personal <br>Projects</anchored-header>
 
       <m-project 
         title="marian" 
@@ -87,9 +81,7 @@ import CodeAppearProject from './components/CodeAppearProject.vue'
 
   <m-frame>
     <div>
-      <header-animated>
-        <h2>About Me</h2>
-      </header-animated>
+      <anchored-header id="about-me">About Me</anchored-header>
 
       <p>
         <code-appear
