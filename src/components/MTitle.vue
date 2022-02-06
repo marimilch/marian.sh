@@ -11,6 +11,8 @@ import { computed, ref } from 'vue'
 import HeaderAnimated from './HeaderAnimated.vue'
 import CodeAppearProject from './CodeAppearProject.vue'
 import Pulse from './Pulse.vue'
+import MLink from './MLink.vue'
+import ScrollToAfterTitle from './ScrollToAfterTitle.vue'
 
 </script>
 
@@ -36,15 +38,7 @@ import Pulse from './Pulse.vue'
           <span class="text-highlight1 align-right pr-1">$></span>
         </div>
         <div class="grow-1">
-          <pulse>
-            <code-appear 
-              class="text-highlight2"
-              :start-delay="2500"
-              text="↓ scroll ↓"
-              :show-cursor="false"
-              :show-enter="false"
-            />
-          </pulse>
+          <scroll-to-after-title />
         </div>
       </div>
     </div>

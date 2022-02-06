@@ -30,6 +30,8 @@ body {
 #app {
   max-width: 800px;
   width: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   // background: repeating-linear-gradient(180deg, var(--highlight1) 0, var(--highlight1) 1px, transparent 1px, transparent 100px) 100% / 40px 100px repeat-y,
   //   repeating-linear-gradient(180deg, var(--d-neutral) 0, var(--d-neutral) 1px, transparent 1px, transparent 20px) 100% / 20px 100px repeat-y,
 }
@@ -60,8 +62,4 @@ p {
 }
 div {
   box-sizing: border-box;
-}
-#app {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }

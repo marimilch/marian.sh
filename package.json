@@ -12,8 +12,7 @@
     "letterizejs": "^2.0.1",
     "normalize.css": "^8.0.1",
     "sass": "^1.45.2",
-    "vue": "^3.2.16",
-    "vue-feather-icons": "^5.1.0"
+    "vue": "^3.2.16"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.9.3",
