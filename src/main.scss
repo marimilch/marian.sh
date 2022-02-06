@@ -30,8 +30,8 @@ body {
 #app {
   max-width: 800px;
   width: 100%;
-  background: repeating-linear-gradient(180deg, var(--highlight1) 0, var(--highlight1) 1px, transparent 1px, transparent 100px) 100% / 40px 100px repeat-y,
-    repeating-linear-gradient(180deg, var(--d-neutral) 0, var(--d-neutral) 1px, transparent 1px, transparent 20px) 100% / 20px 100px repeat-y,
+  // background: repeating-linear-gradient(180deg, var(--highlight1) 0, var(--highlight1) 1px, transparent 1px, transparent 100px) 100% / 40px 100px repeat-y,
+  //   repeating-linear-gradient(180deg, var(--d-neutral) 0, var(--d-neutral) 1px, transparent 1px, transparent 20px) 100% / 20px 100px repeat-y,
 }
 h1, h2, .h1, .h2 {
   font-family: Major Mono Display, monospace;

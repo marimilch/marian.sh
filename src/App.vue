@@ -91,31 +91,35 @@ import CodeAppearProject from './components/CodeAppearProject.vue'
         <h2>About Me</h2>
       </header-animated>
 
-      <code-appear
-        :char-delay="20"
-        :char-step="4"
-        text="I'm a graduate in computer science and I really 
-          enjoy programming and anything involving creativity. 
-          I currently live in Mainz a little outside of the city.
-          Other hobbies of mine are making music, participating 
-          at a musical and hanging out with friends."
-      />
+      <p>
+        <code-appear
+          :char-delay="20"
+          :char-step="4"
+          text="I'm a graduate in computer science and I really 
+            enjoy programming and anything involving creativity. 
+            I currently live in Mainz a little outside of the city.
+            Other hobbies of mine are making music, participating 
+            at a musical and hanging out with friends."
+        />
+      </p>
 
-      <br>
-      <br>
+      <br />
 
-      <m-link href="https://www.linkedin.com/in/marian-amiragov/" external>
-        <code-appear-project text=" LINKEDIN↗ "/>
-      </m-link> <m-link href="https://github.com/marimilch" external>
-        <code-appear-project text=" GITHUB↗ "/>
-      </m-link>
+      <p>
+        <m-link href="https://www.linkedin.com/in/marian-amiragov/" external>
+          <code-appear-project text=" LINKEDIN↗ "/>
+        </m-link> <m-link href="https://github.com/marimilch" external>
+          <code-appear-project text=" GITHUB↗ "/>
+        </m-link>
+      </p>
 
-      <br>
-      <br>
+      <br />
 
-      <m-link href="https://raw.githubusercontent.com/marimilch/unity-xpbd-jakobsen-cable/main/Bachelor_Thesis_Marian_Amiragov.pdf" external> 
-        <code-appear-project text=" THESIS↗ "/>
-      </m-link>
+      <p>
+        <m-link href="https://raw.githubusercontent.com/marimilch/unity-xpbd-jakobsen-cable/main/Bachelor_Thesis_Marian_Amiragov.pdf" external> 
+          <code-appear-project text=" THESIS↗ "/>
+        </m-link>
+      </p>
     </div>
 
   </m-frame>
