@@ -25,21 +25,24 @@ import CodeAppearProject from './components/CodeAppearProject.vue'
         title="ERGO RISE" 
         link="https://kandidat.ergo.flynne.de" 
         :year="2021"
-        description="backend API, recruiter dashboard and the candidate dashboard"
+        :tags="['vue2', 'laravel8']"
+        description="backend API, recruiter dashboard and the candidate dashboard."
       />
 
       <m-project 
         title="Brandmonks Media" 
         link="https://bm.media" 
         :year="2021"
-        description="frontend and effects"
+        :tags="['anime.js']"
+        description="frontend and effects."
       />
 
       <m-project 
         title="flynne" 
         link="https://flynne.de" 
         :year="2020"
-        description="backend API, recruiter dashboard and landing page"
+        :tags="['vue2', 'wordpress', 'laravel5']"
+        description="backend API, recruiter dashboard and landing page."
       >
         
       </m-project>
@@ -47,8 +50,9 @@ import CodeAppearProject from './components/CodeAppearProject.vue'
       <m-project 
         title="TXT Performer" 
         link="https://txtperformer.com" 
+        :tags="['js', 'php', 'vanilla']"
         :year="2018"
-        description="backend and frontend from scratch "
+        description="backend and frontend."
       />
         
     </div>
@@ -65,7 +69,8 @@ import CodeAppearProject from './components/CodeAppearProject.vue'
         suffix="sh" 
         link="https://marian.sh" 
         github="marimilch/marian.sh"
-        description="design, programming, effects"
+        description="design, programming, effects."
+        :tags="['vue3', 'animejs']"
         :year="2022"
       />
 
@@ -74,7 +79,8 @@ import CodeAppearProject from './components/CodeAppearProject.vue'
         suffix="de" 
         link="https://marimilch.de" 
         github="marimilch/marimilch.de"
-        description="design, programming, effects"
+        :tags="['vue2', 'animejs']"
+        description="design, programming, effects."
         :year="2021"
       />
       
