@@ -1,0 +1,67 @@
+@import './vars.scss';
+
+@font-face {
+  font-family: Major Mono Display;
+  src: url(./assets/fonts/Major_Mono_Display/MajorMonoDisplay-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: Source Code Pro;
+  src: url(./assets/fonts/Source_Code_Pro/SourceCodePro-VariableFont_wght.ttf) format('truetype');
+}
+@font-face {
+  font-family: Source Code Pro;
+  src: url(./assets/fonts/Source_Code_Pro/SourceCodePro-Italic-VariableFont_wght.ttf) format('truetype');
+  font-style: italic;
+}
+body {
+  -webkit-font-smoothing: antialiased; // safari bug workaround
+  font-family: Source Code Pro, monospace;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23px;
+  background: var(--d-background);
+
+  display: flex;
+  justify-content: center;
+
+  color: var(--d-neutral);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.125);
+}
+#app {
+  max-width: 800px;
+  width: 100%;
+  // background: repeating-linear-gradient(180deg, var(--highlight1) 0, var(--highlight1) 1px, transparent 1px, transparent 100px) 100% / 40px 100px repeat-y,
+  //   repeating-linear-gradient(180deg, var(--d-neutral) 0, var(--d-neutral) 1px, transparent 1px, transparent 20px) 100% / 20px 100px repeat-y,
+}
+h1, h2, .h1, .h2 {
+  font-family: Major Mono Display, monospace;
+  // font-style: normal;
+  // font-weight: normal;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 46px;
+
+  &::after {
+    content: '.';
+    color: var(--highlight1);
+  }
+}
+h2, .h2 {
+  font-size: 24px;
+  line-height: 24px;
+}
+h3, h4, h5, h6 {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+  margin: 0;
+}
+p {
+  margin: 0;
+}
+div {
+  box-sizing: border-box;
+}
+#app {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

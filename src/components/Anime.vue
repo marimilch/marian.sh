@@ -27,7 +27,6 @@ export default defineComponent({
         : root
 
       a.complete = () => {
-        console.log('animation complete')
         this.$emit('animationComplete')
       }
       a.complete.bind(this)

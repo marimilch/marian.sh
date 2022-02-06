@@ -18,13 +18,13 @@ withDefaults(defineProps<Props>(), {
 @import '../vars.scss';
 a {
   text-transform: uppercase;
-  color: $highlight1;
-  font-weight: 400;
+  color: var(--highlight1);
+  font-variation-settings: 'wght' 400;
   background: transparent;
-  transition: font-weight .4s ease,
-              background  .2s ease,
-              box-shadow  .2s ease,
-              color       .2s ease;
+  transition: font-variation-settings .4s ease,
+              background              .2s ease,
+              box-shadow              .2s ease,
+              color                   .2s ease;
   text-decoration: none;
 
   &::before {
@@ -35,11 +35,11 @@ a {
   }
 
   &:active, &:hover {
-    font-weight: 900;
+    font-variation-settings: 'wght' 900;
     font-style: italic;
-    background: $highlight1;
+    background: var(--highlight1);
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.125);
-    color: $background;
+    color: var(--d-background);
   }
 }
 </style>

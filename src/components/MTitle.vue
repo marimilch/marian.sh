@@ -10,6 +10,7 @@ import BlinkCursor from './BlinkCursor.vue'
 import { computed, ref } from 'vue'
 import HeaderAnimated from './HeaderAnimated.vue'
 import CodeAppearProject from './CodeAppearProject.vue'
+import Pulse from './Pulse.vue'
 
 </script>
 
@@ -24,7 +25,7 @@ import CodeAppearProject from './CodeAppearProject.vue'
           <code-appear class="text-highlight2" text="marian.sh"/>
           <div>
             <header-animated :appear-delay="1700">
-              <h1><span>hi, I'm </span><br><span>Marian</span><span> <br>and I <br>develop <br></span><span>Software</span></h1>
+              <h1 class="text-neutral"><span>hi, I'm </span><br><span>Marian</span><span> <br>and I <br>develop <br></span><span>Software</span></h1>
             </header-animated>
           </div>
         </div>
@@ -35,11 +36,15 @@ import CodeAppearProject from './CodeAppearProject.vue'
           <span class="text-highlight1 align-right pr-1">$></span>
         </div>
         <div class="grow-1">
-          <code-appear 
-            class="text-highlight2"
-            :start-delay="2500"
-            text="↓ scroll ↓"
-          />
+          <pulse>
+            <code-appear 
+              class="text-highlight2"
+              :start-delay="2500"
+              text="↓ scroll ↓"
+              :show-cursor="false"
+              :show-enter="false"
+            />
+          </pulse>
         </div>
       </div>
     </div>
@@ -47,6 +52,10 @@ import CodeAppearProject from './CodeAppearProject.vue'
 </template>
 
 <style scoped>
+h1 {
+  font-size: 36px;
+  line-height: 36px;
+}
 div {
   width: 100%;
 }

@@ -14,6 +14,8 @@ interface Props {
   disappearDelay?: number,
   showCursor?: boolean,
   showEnter?: boolean,
+  reserveSpace?: boolean,
+  charStep?: number,
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -23,6 +25,8 @@ const props = withDefaults(defineProps<Props>(), {
   disappearDelay: 500,
   showCursor: true,
   showEnter: true,
+  reserveSpace: true,
+  charStep: 1,
 })
 
 const emit = defineEmits(['initialized', 'animationBegin', 'animationDone', 'enterPressed'])
@@ -32,6 +36,7 @@ let done = ref(false)
 let typingStarted = computed( () => len.value > 0 )
 let visibleBlink = ref(true)
 let currentText = computed( () => props.text.slice(0, len.value) )
+let contraText = computed( () => props.text.slice(len.value, props.text.length) )
 
 async function run() {
   emit('initialized')
@@ -39,7 +44,11 @@ async function run() {
   emit('animationBegin')
   while (len.value < props.text.length) {
     await wait(props.charDelay)
-    len.value += 1
+    if (len.value + props.charStep >= props.text.length) {
+      len.value = props.text.length
+      continue
+    }
+    len.value += props.charStep
   }
   await wait(props.endDelay)
   done.value = true
@@ -59,16 +68,22 @@ function reset() {
 <template>
 <span>
   <on-visible @on-visible="run" @on-hidden="reset" class="inline">
-    <span v-if="!typingStarted" class="placeholder opacity-0 inline-block w-0">a</span>
-    <span>{{ currentText }}</span>
-    <enter-icon v-if="done && showEnter" class="enter-icon inline h-4 text-neutral" />
-    <br v-if="done && showEnter"/>
-    <blink-cursor
-      v-if="showCursor"
-      :font-height="22" 
-      class="absolute pointer-none transition-colors" 
-      :class="visibleBlink ? '' : 'bg-transparent'"
-    />       
+    <span v-if="!typingStarted" class="placeholder opacity-0 inline-block w-0">
+      a
+    </span>
+    <span>
+      {{ currentText }}<enter-icon v-if="done && showEnter" class="mt-1.5 absolute enter-icon inline h-4 text-neutral" /><br 
+        v-if="done && showEnter"
+      /><blink-cursor
+        v-if="showCursor"
+        :font-height="22" 
+        class="absolute pointer-none transition-opacity" 
+        :class="visibleBlink ? '' : 'opacity-0'"
+      /><span
+        v-if="reserveSpace"
+        class="opacity-0 pointer-events-none"
+      >{{ contraText }}</span>  
+    </span>   
   </on-visible>
 </span>
 </template>
