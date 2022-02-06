@@ -5,29 +5,30 @@
 <style lang="scss" scoped>
 @keyframes pulse {
   0% {
-    font-weight: 400;
+    font-variation-settings: 'wght' 400;
   }
   5% {
-    font-weight: 375;
+    font-variation-settings: 'wght' 375;
   }
   20% {
-    font-weight: 900;
+    font-variation-settings: 'wght' 900;
   }
   30% {
-    font-weight: 300;
+    font-variation-settings: 'wght' 300;
   }
   40% {
-    font-weight: 450;
+    font-variation-settings: 'wght' 450;
   }
   50% {
-    font-weight: 400;
+    font-variation-settings: 'wght' 400;
   }
   100% {
-    font-weight: 400;
+    font-variation-settings: 'wght' 400;
   }
 }
 
 span {
   animation: pulse 1.5s linear 0s infinite normal;
+  letter-spacing: 0 !important;
 }
 </style>

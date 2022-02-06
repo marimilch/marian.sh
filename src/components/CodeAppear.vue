@@ -14,7 +14,7 @@ interface Props {
   disappearDelay?: number,
   showCursor?: boolean,
   showEnter?: boolean,
-  reservePlace?: boolean,
+  reserveSpace?: boolean,
   charStep?: number,
 }
 
@@ -25,7 +25,7 @@ const props = withDefaults(defineProps<Props>(), {
   disappearDelay: 500,
   showCursor: true,
   showEnter: true,
-  reservePlace: true,
+  reserveSpace: true,
   charStep: 1,
 })
 
@@ -36,6 +36,7 @@ let done = ref(false)
 let typingStarted = computed( () => len.value > 0 )
 let visibleBlink = ref(true)
 let currentText = computed( () => props.text.slice(0, len.value) )
+let contraText = computed( () => props.text.slice(len.value, props.text.length) )
 
 async function run() {
   emit('initialized')
@@ -70,21 +71,19 @@ function reset() {
     <span v-if="!typingStarted" class="placeholder opacity-0 inline-block w-0">
       a
     </span>
-    <span :class="reservePlace ? 'relative' : ''">
-      <span v-if="reservePlace" class="opacity-0 pointer-events-none">
-        {{ text }}<enter-icon v-if="showEnter" class="enter-icon inline h-4 text-neutral" />
-      </span>
-      <span :class="reservePlace ? 'absolute top-0 left-0' : ''">
-        {{ currentText }}<enter-icon v-if="done && showEnter" class="mt-1.5 absolute enter-icon inline h-4 text-neutral" /><br 
-          v-if="done && showEnter"
-        /><blink-cursor
-          v-if="showCursor"
-          :font-height="22" 
-          class="absolute pointer-none transition-colors" 
-          :class="visibleBlink ? '' : 'bg-transparent'"
-        />  
-      </span>
-    </span>     
+    <span>
+      {{ currentText }}<enter-icon v-if="done && showEnter" class="mt-1.5 absolute enter-icon inline h-4 text-neutral" /><br 
+        v-if="done && showEnter"
+      /><blink-cursor
+        v-if="showCursor"
+        :font-height="22" 
+        class="absolute pointer-none transition-opacity" 
+        :class="visibleBlink ? '' : 'opacity-0'"
+      /><span
+        v-if="reserveSpace"
+        class="opacity-0 pointer-events-none"
+      >{{ contraText }}</span>  
+    </span>   
   </on-visible>
 </span>
 </template>

@@ -5,11 +5,11 @@ defineProps<{ fontHeight: number }>()
 </script>
 
 <template>
-  <div 
-    class="blink-cursor bg-neutral rounded-sm inline-block" 
-    :style="`height: ${fontHeight}px; width: ${0.741 * fontHeight}px;`"
-  >
-
+  <div class="inline-block">
+    <div 
+      class="blink-cursor bg-neutral rounded-sm" 
+      :style="`height: ${fontHeight}px; width: ${0.741 * fontHeight}px;`"
+    ></div>
   </div>
 </template>
 

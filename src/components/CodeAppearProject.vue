@@ -14,6 +14,6 @@ const props = defineProps<{
     :char-delay="70"
     :show-cursor="false"
     :show-enter="false"
-    :reserve-place="false"
+    :reserve-space="false"
   ></code-appear>
 </template>

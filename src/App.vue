@@ -140,9 +140,10 @@ import CodeAppearProject from './components/CodeAppearProject.vue'
   font-style: italic;
 }
 body {
+  -webkit-font-smoothing: antialiased; // safari bug workaround
   font-family: Source Code Pro, monospace;
-  font-style: normal;
   font-size: 18px;
+  font-weight: 400;
   line-height: 23px;
   background: $background;
 
@@ -160,8 +161,8 @@ body {
 }
 h1, h2, .h1, .h2 {
   font-family: Major Mono Display, monospace;
-  font-style: normal;
-  font-weight: normal;
+  // font-style: normal;
+  // font-weight: normal;
   color: #454545;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin-bottom: 46px;
