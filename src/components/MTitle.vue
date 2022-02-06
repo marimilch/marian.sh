@@ -10,6 +10,7 @@ import BlinkCursor from './BlinkCursor.vue'
 import { computed, ref } from 'vue'
 import HeaderAnimated from './HeaderAnimated.vue'
 import CodeAppearProject from './CodeAppearProject.vue'
+import Pulse from './Pulse.vue'
 
 </script>
 
@@ -35,11 +36,13 @@ import CodeAppearProject from './CodeAppearProject.vue'
           <span class="text-highlight1 align-right pr-1">$></span>
         </div>
         <div class="grow-1">
-          <code-appear 
-            class="text-highlight2"
-            :start-delay="2500"
-            text="↓ scroll ↓"
-          />
+          <pulse>
+            <code-appear 
+              class="text-highlight2"
+              :start-delay="2500"
+              text="↓ scroll ↓"
+            />
+          </pulse>
         </div>
       </div>
     </div>
