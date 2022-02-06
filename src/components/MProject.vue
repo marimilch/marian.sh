@@ -48,13 +48,12 @@ span {
   <div class="project">
     <h3>{<span class="title"><code-appear-project :text="title"/></span><span class="suffix"><code-appear-project :text="suffix"/></span>} <span v-if="year" class="year"><code-appear-project :text="year.toString()"/></span></h3>
     <p><code-appear :char-delay="10" :show-enter="false" :text="description"/></p>
-
-    <m-link :href="link" external>
-      <code-appear-project text=" OPEN↗ "/>
-    </m-link>
-
-    <m-link v-if="github" :href="'https://github.com/' + github" external>
-      <code-appear-project text=" GITHUB↗ "/>
-    </m-link>
+    <p>
+      <m-link :href="link" external>
+        <code-appear-project text=" OPEN↗ "/>
+      </m-link> <m-link v-if="github" :href="'https://github.com/' + github" external>
+        <code-appear-project text=" GITHUB↗ "/>
+      </m-link>
+    </p>
   </div>
 </template>

@@ -93,16 +93,15 @@ import CodeAppearProject from './components/CodeAppearProject.vue'
           enjoy programming and anything involving creativity. 
           I currently live in Mainz a little outside of the city.
           Other hobbies of mine are making music, participating 
-          at Musical Inc. and meeting friends."
+          at a musical and hanging out with friends."
       />
 
+      <br>
       <br>
 
       <m-link href="https://www.linkedin.com/in/marian-amiragov/" external>
         <code-appear-project text=" LINKEDIN↗ "/>
-      </m-link>
-
-      <m-link href="https://github.com/marimilch" external>
+      </m-link> <m-link href="https://github.com/marimilch" external>
         <code-appear-project text=" GITHUB↗ "/>
       </m-link>
 

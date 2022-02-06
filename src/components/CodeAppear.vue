@@ -14,6 +14,7 @@ interface Props {
   disappearDelay?: number,
   showCursor?: boolean,
   showEnter?: boolean,
+  reservePlace?: boolean,
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -23,6 +24,7 @@ const props = withDefaults(defineProps<Props>(), {
   disappearDelay: 500,
   showCursor: true,
   showEnter: true,
+  reservePlace: true,
 })
 
 const emit = defineEmits(['initialized', 'animationBegin', 'animationDone', 'enterPressed'])
@@ -59,16 +61,24 @@ function reset() {
 <template>
 <span>
   <on-visible @on-visible="run" @on-hidden="reset" class="inline">
-    <span v-if="!typingStarted" class="placeholder opacity-0 inline-block w-0">a</span>
-    <span>{{ currentText }}</span>
-    <enter-icon v-if="done && showEnter" class="enter-icon inline h-4 text-neutral" />
-    <br v-if="done && showEnter"/>
-    <blink-cursor
-      v-if="showCursor"
-      :font-height="22" 
-      class="absolute pointer-none transition-colors" 
-      :class="visibleBlink ? '' : 'bg-transparent'"
-    />       
+    <span v-if="!typingStarted" class="placeholder opacity-0 inline-block w-0">
+      a
+    </span>
+    <span :class="reservePlace ? 'relative' : ''">
+      <span v-if="reservePlace" class="opacity-0 pointer-events-none">
+        {{ text }}<enter-icon v-if="showEnter" class="enter-icon inline h-4 text-neutral" />
+      </span>
+      <span :class="reservePlace ? 'absolute top-0 left-0' : ''">
+        {{ currentText }}<enter-icon v-if="done && showEnter" class="enter-icon inline h-4 text-neutral" /><br 
+          v-if="done && showEnter"
+        /><blink-cursor
+          v-if="showCursor"
+          :font-height="22" 
+          class="absolute pointer-none transition-colors" 
+          :class="visibleBlink ? '' : 'bg-transparent'"
+        />  
+      </span>
+    </span>     
   </on-visible>
 </span>
 </template>
