@@ -57,6 +57,10 @@ h3, h4, h5, h6 {
   line-height: 23px;
   margin: 0;
 }
+.font-var-bold {
+  font-variation-settings: 'wght' 900;
+  font-weight: 400;
+}
 p {
   margin: 0;
 }
