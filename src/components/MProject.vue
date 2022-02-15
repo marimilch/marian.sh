@@ -56,7 +56,7 @@ span {
 
 <template>
   <div class="project">
-    <h3 class="font-bold">
+    <h3 class="font-var-bold">
       {
         <span class="title"><code-appear-project :text="title"/></span>
         <span class="suffix"><code-appear-project :text="suffix"/></span>
