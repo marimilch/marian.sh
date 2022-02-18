@@ -16,6 +16,7 @@ interface Props {
   showEnter?: boolean,
   reserveSpace?: boolean,
   charStep?: number,
+  childClass?: string,
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -27,6 +28,7 @@ const props = withDefaults(defineProps<Props>(), {
   showEnter: true,
   reserveSpace: true,
   charStep: 1,
+  childClass: '',
 })
 
 const emit = defineEmits(['initialized', 'animationBegin', 'animationDone', 'enterPressed'])
@@ -71,7 +73,7 @@ function reset() {
     <span v-if="!typingStarted" class="placeholder opacity-0 inline-block w-0">
       a
     </span>
-    <span>
+    <span :class="childClass">
       {{ currentText }}<enter-icon v-if="done && showEnter" class="mt-1.5 absolute enter-icon inline h-4 text-neutral" /><br 
         v-if="done && showEnter"
       /><blink-cursor

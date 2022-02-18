@@ -22,15 +22,15 @@ import AnchoredHeader from './components/AnchoredHeader.vue'
         link="https://kandidat.ergo.flynne.de" 
         :year="2021"
         :tags="['vue2', 'laravel8']"
-        description="backend API, recruiter dashboard and the candidate dashboard."
+        description="co-developed backend API, recruiter dashboard and the candidate dashboard."
       />
 
       <m-project 
         title="Brandmonks Media" 
         link="https://bm.media" 
         :year="2021"
-        :tags="['anime.js']"
-        description="frontend and effects."
+        :tags="['animejs']"
+        description="programmed frontend and effects."
       />
 
       <m-project 
@@ -38,7 +38,7 @@ import AnchoredHeader from './components/AnchoredHeader.vue'
         link="https://flynne.de" 
         :year="2020"
         :tags="['vue2', 'wordpress', 'laravel5']"
-        description="backend API, recruiter dashboard and landing page."
+        description="co-developed backend API, recruiter dashboard and landing page."
       />
 
       <m-project 
@@ -71,11 +71,28 @@ import AnchoredHeader from './components/AnchoredHeader.vue'
         suffix="de" 
         link="https://marimilch.de" 
         github="marimilch/marimilch.de"
-        :tags="['vue2', 'animejs']"
+        :tags="['vue2', 'animejs', 'threejs']"
         description="design, programming, effects."
         :year="2021"
       />
       
+    </div>
+  </m-frame>
+
+  <m-frame>
+    <div>
+      <anchored-header id="about-me">Education</anchored-header>
+
+      <m-project 
+        title="B.Sc. in Computer Science" 
+        description="Graduated at the University of Mainz. Thesis topic: Cable Simulation in Unity"
+        :tags="['csharp', 'unity', 'simulation']"
+        github="marimilch/unity-xpbd-jakobsen-cable"
+        :year="2021"
+        :links="[
+          {label: 'Thesis', href: 'https://raw.githubusercontent.com/marimilch/unity-xpbd-jakobsen-cable/main/Bachelor_Thesis_Marian_Amiragov.pdf', external: true},
+        ]"
+      />
     </div>
   </m-frame>
 
@@ -87,8 +104,8 @@ import AnchoredHeader from './components/AnchoredHeader.vue'
         <code-appear
           :char-delay="20"
           :char-step="4"
-          text="I'm a graduate in computer science and I really 
-            enjoy programming and anything involving creativity. 
+          text="I graduated with a bachelor in computer science at the University of Mainz. 
+            I really enjoy programming and anything involving creativity. 
             I currently live in Mainz a little outside of the city.
             Other hobbies of mine are making music, participating 
             at a musical and hanging out with friends."
@@ -106,14 +123,7 @@ import AnchoredHeader from './components/AnchoredHeader.vue'
       </p>
 
       <br />
-
-      <p>
-        <m-link href="https://raw.githubusercontent.com/marimilch/unity-xpbd-jakobsen-cable/main/Bachelor_Thesis_Marian_Amiragov.pdf" external> 
-          <code-appear-project text=" THESIS↗ "/>
-        </m-link>
-      </p>
     </div>
-
   </m-frame>
 
 </template>
