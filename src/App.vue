@@ -62,7 +62,7 @@ import AnchoredHeader from './components/AnchoredHeader.vue'
         link="https://marian.sh" 
         github="marimilch/marian.sh"
         description="design, programming, effects."
-        :tags="['vue3', 'animejs']"
+        :tags="['vue3', 'animejs', 'docker']"
         :year="2022"
       />
 
