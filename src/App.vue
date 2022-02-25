@@ -85,7 +85,7 @@ import AnchoredHeader from './components/AnchoredHeader.vue'
 
   <m-frame>
     <div>
-      <anchored-header id="about-me">Education</anchored-header>
+      <anchored-header id="education">Education</anchored-header>
 
       <m-project 
         title="B.Sc. in Computer Science" 
