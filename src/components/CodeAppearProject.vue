@@ -3,7 +3,8 @@ import CodeAppear from './CodeAppear.vue'
 import { defineProps } from 'vue'
 
 const props = defineProps<{
-  text: string
+  text: string,
+  childClass?: string,
 }>()
 </script>
 
@@ -14,6 +15,7 @@ const props = defineProps<{
     :char-delay="70"
     :show-cursor="false"
     :show-enter="false"
+    :child-class="childClass"
     :reserve-space="false"
   ></code-appear>
 </template>

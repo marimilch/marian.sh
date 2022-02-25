@@ -5,14 +5,21 @@ import CodeAppear from './CodeAppear.vue'
 
 import {computed} from 'vue'
 
+interface Link {
+  label: string
+  href: string
+  external?: boolean,
+}
+
 interface Props {
   title: string
-  link: string
+  link?: string
   description: string,
   tags?: Iterable<string>,
   suffix?: string
   github?: string | null
   year?: number | null
+  links?: Array<Link>
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -76,10 +83,12 @@ span {
       />
     </p>
     <p>
-      <m-link :href="link" external>
-        <code-appear-project text=" OPEN↗ "/>
+      <m-link v-if="link" :href="link" external>
+        <code-appear-project child-class="uppercase" text=" Open↗ "/>
       </m-link> <m-link v-if="github" :href="'https://github.com/' + github" external>
-        <code-appear-project text=" GITHUB↗ "/>
+        <code-appear-project child-class="uppercase" text=" GitHub↗ "/>
+      </m-link> <m-link v-for="link of links" :href="link.href" :external="link.external">
+        <code-appear-project child-class="uppercase" :text="` ${link.label}${link.external ? '↗' : ''} `"/>
       </m-link>
     </p>
   </div>
