@@ -22,7 +22,9 @@ import AnchoredHeader from './components/AnchoredHeader.vue'
         link="https://kandidat.ergo.flynne.de" 
         :year="2021"
         :tags="['vue2', 'laravel8']"
-        description="co-developed backend API, recruiter dashboard and the candidate dashboard."
+        description="Trainee application platform.
+        Co-developed backend API, recruiter 
+        dashboard and the candidate dashboard."
       />
 
       <m-project 
@@ -30,7 +32,8 @@ import AnchoredHeader from './components/AnchoredHeader.vue'
         link="https://bm.media" 
         :year="2021"
         :tags="['animejs']"
-        description="programmed frontend and effects."
+        description="Agency website.
+        Programmed frontend and effects."
       />
 
       <m-project 
@@ -38,7 +41,8 @@ import AnchoredHeader from './components/AnchoredHeader.vue'
         link="https://flynne.de" 
         :year="2020"
         :tags="['vue2', 'wordpress', 'laravel5']"
-        description="co-developed backend API, recruiter dashboard and landing page."
+        description="Applicant tracking system.
+        Co-developed backend API, recruiter dashboard and landing page."
       />
 
       <m-project 
@@ -46,7 +50,7 @@ import AnchoredHeader from './components/AnchoredHeader.vue'
         link="https://txtperformer.com" 
         :tags="['js', 'php', 'vanilla']"
         :year="2018"
-        description="backend and frontend."
+        description="Text tool. Backend and frontend."
       />
         
     </div>
@@ -61,7 +65,7 @@ import AnchoredHeader from './components/AnchoredHeader.vue'
         suffix="sh" 
         link="https://marian.sh" 
         github="marimilch/marian.sh"
-        description="design, programming, effects."
+        description="CV as a website. design, programming, effects."
         :tags="['vue3', 'animejs', 'docker']"
         :year="2022"
       />
@@ -72,7 +76,7 @@ import AnchoredHeader from './components/AnchoredHeader.vue'
         link="https://marimilch.de" 
         github="marimilch/marimilch.de"
         :tags="['vue2', 'animejs', 'threejs']"
-        description="design, programming, effects."
+        description="Website for personal games. Design, programming, effects."
         :year="2021"
       />
       
