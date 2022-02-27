@@ -48,7 +48,7 @@ import AnchoredHeader from './components/AnchoredHeader.vue'
       <m-project 
         title="TXT Performer" 
         link="https://txtperformer.com" 
-        :tags="['js', 'php', 'vanilla']"
+        :tags="['js', 'php', 'vanilla', 'typescript']"
         :year="2018"
         description="Text tool. Backend and frontend."
       />
@@ -66,7 +66,7 @@ import AnchoredHeader from './components/AnchoredHeader.vue'
         link="https://marian.sh" 
         github="marimilch/marian.sh"
         description="CV as a website. design, programming, effects."
-        :tags="['vue3', 'animejs', 'docker']"
+        :tags="['vue3', 'animejs', 'typescript', 'docker']"
         :year="2022"
       />
 
@@ -80,23 +80,6 @@ import AnchoredHeader from './components/AnchoredHeader.vue'
         :year="2021"
       />
       
-    </div>
-  </m-frame>
-
-  <m-frame>
-    <div>
-      <anchored-header id="education">Education</anchored-header>
-
-      <m-project 
-        title="B.Sc. in Computer Science" 
-        description="Graduated at the University of Mainz. Thesis topic: Cable Simulation in Unity"
-        :tags="['csharp', 'unity', 'simulation']"
-        github="marimilch/unity-xpbd-jakobsen-cable"
-        :year="2021"
-        :links="[
-          {label: 'Thesis', href: 'https://raw.githubusercontent.com/marimilch/unity-xpbd-jakobsen-cable/main/Bachelor_Thesis_Marian_Amiragov.pdf', external: true},
-        ]"
-      />
     </div>
   </m-frame>
 
@@ -127,6 +110,12 @@ import AnchoredHeader from './components/AnchoredHeader.vue'
       </p>
 
       <br />
+
+      <p>
+        <m-link href="/downloads/Marian Amiragov - CV.pdf" external>
+          <code-appear-project text=" CV↗ "/>
+        </m-link>
+      </p>
     </div>
   </m-frame>
 
