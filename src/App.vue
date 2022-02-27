@@ -18,19 +18,29 @@ import AnchoredHeader from './components/AnchoredHeader.vue'
       <anchored-header id="professional-work">Professional <br>Work</anchored-header>
 
       <m-project 
+        title="digiLift" 
+        link="https://digilift.de" 
+        :year="2022"
+        :tags="['vue3', 'laravel8', 'tailwind']"
+        description="Platform for educational institutes 
+        to request digital devices. Government funded. 
+        Developed backend and frontend in a team."
+      />
+
+      <m-project 
         title="ERGO RISE" 
         link="https://kandidat.ergo.flynne.de" 
         :year="2021"
         :tags="['vue2', 'laravel8']"
         description="Trainee application platform.
-        Co-developed backend API, recruiter 
-        dashboard and the candidate dashboard."
+        Developed backend API, recruiter 
+        dashboard and the candidate dashboard in a team."
       />
 
       <m-project 
         title="Brandmonks Media" 
         link="https://bm.media" 
-        :year="2021"
+        :year="2020"
         :tags="['animejs']"
         description="Agency website.
         Programmed frontend and effects."
@@ -42,7 +52,7 @@ import AnchoredHeader from './components/AnchoredHeader.vue'
         :year="2020"
         :tags="['vue2', 'wordpress', 'laravel5']"
         description="Applicant tracking system.
-        Co-developed backend API, recruiter dashboard and landing page."
+        Developed backend API, recruiter dashboard and landing page in a team."
       />
 
       <m-project 
@@ -50,7 +60,7 @@ import AnchoredHeader from './components/AnchoredHeader.vue'
         link="https://txtperformer.com" 
         :tags="['js', 'php', 'vanilla', 'typescript']"
         :year="2018"
-        description="Text tool. Backend and frontend."
+        description="Text tool. Programmed backend and frontend."
       />
         
     </div>
@@ -65,7 +75,7 @@ import AnchoredHeader from './components/AnchoredHeader.vue'
         suffix="sh" 
         link="https://marian.sh" 
         github="marimilch/marian.sh"
-        description="CV as a website. design, programming, effects."
+        description="CV/portfolio as a website."
         :tags="['vue3', 'animejs', 'typescript', 'docker']"
         :year="2022"
       />
@@ -76,7 +86,7 @@ import AnchoredHeader from './components/AnchoredHeader.vue'
         link="https://marimilch.de" 
         github="marimilch/marimilch.de"
         :tags="['vue2', 'animejs', 'threejs']"
-        description="Website for personal games. Design, programming, effects."
+        description="Website for personal games."
         :year="2021"
       />
       
@@ -93,7 +103,7 @@ import AnchoredHeader from './components/AnchoredHeader.vue'
           :char-step="4"
           text="I graduated with a bachelor in computer science at the University of Mainz. 
             I really enjoy programming and anything involving creativity. 
-            I currently live in Mainz a little outside of the city.
+            Currently I live in Mainz a little outside of the city.
             Other hobbies of mine are making music, participating 
             at a musical and hanging out with friends."
         />
