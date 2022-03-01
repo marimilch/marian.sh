@@ -84,7 +84,7 @@ import AnchoredHeader from './components/AnchoredHeader.vue'
         title="marimilch" 
         suffix="de" 
         link="https://marimilch.de" 
-        github="marimilch/marimilch.de"
+        github="marimilch/marimilch.de-new"
         :tags="['vue2', 'animejs', 'threejs']"
         description="Website for personal games."
         :year="2021"
