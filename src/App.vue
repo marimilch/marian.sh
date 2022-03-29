@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import './index.css'
 
-import MTitle           from './components/MTitle.vue'
-import MFrame           from './components/MFrame.vue'
-import MLink            from './components/MLink.vue'
-import MProject         from './components/MProject.vue'
-import CodeAppear from './components/CodeAppear.vue'
+import MTitle            from './components/MTitle.vue'
+import MFrame            from './components/MFrame.vue'
+import MLink             from './components/MLink.vue'
+import MProject          from './components/MProject.vue'
+import CodeAppear        from './components/CodeAppear.vue'
 import CodeAppearProject from './components/CodeAppearProject.vue'
-import AnchoredHeader from './components/AnchoredHeader.vue'
+import AnchoredHeader    from './components/AnchoredHeader.vue'
 </script>
 
 <template>
