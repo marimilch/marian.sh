@@ -89,6 +89,22 @@ import AnchoredHeader from './components/AnchoredHeader.vue'
         description="Website for personal games."
         :year="2021"
       />
+
+      <m-project 
+        title="Cable simulation in Unity" 
+        github="marimilch/unity-xpbd-jakobsen-cable"
+        :tags="['csharp', 'unity', 'xpbd', 'simulation']"
+        description="An implementation of the XPBD, PBD and Jakobsen algorithm in Unity. My bachelor thesis."
+        :year="2021"
+      />
+
+      <m-project 
+        title="ASCIIRay" 
+        github="marimilch/asciiray"
+        :tags="['c', 'vanilla']"
+        description="A three dimensional cube rotating in your console."
+        :year="2019"
+      />
       
     </div>
   </m-frame>
