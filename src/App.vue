@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import './index.css'
 
-import MTitle           from './components/MTitle.vue'
-import MFrame           from './components/MFrame.vue'
-import MLink            from './components/MLink.vue'
-import MProject         from './components/MProject.vue'
-import CodeAppear from './components/CodeAppear.vue'
+import MTitle            from './components/MTitle.vue'
+import MFrame            from './components/MFrame.vue'
+import MLink             from './components/MLink.vue'
+import MProject          from './components/MProject.vue'
+import CodeAppear        from './components/CodeAppear.vue'
 import CodeAppearProject from './components/CodeAppearProject.vue'
-import AnchoredHeader from './components/AnchoredHeader.vue'
+import AnchoredHeader    from './components/AnchoredHeader.vue'
 </script>
 
 <template>
@@ -88,6 +88,22 @@ import AnchoredHeader from './components/AnchoredHeader.vue'
         :tags="['vue2', 'animejs', 'threejs']"
         description="Website for personal games."
         :year="2021"
+      />
+
+      <m-project 
+        title="Cable simulation in Unity" 
+        github="marimilch/unity-xpbd-jakobsen-cable"
+        :tags="['csharp', 'unity', 'xpbd', 'simulation']"
+        description="An implementation of the XPBD, PBD and Jakobsen algorithm in Unity. My bachelor thesis."
+        :year="2021"
+      />
+
+      <m-project 
+        title="ASCIIRay" 
+        github="marimilch/asciiray"
+        :tags="['c', 'vanilla']"
+        description="A three dimensional cube rotating in your console."
+        :year="2019"
       />
       
     </div>
