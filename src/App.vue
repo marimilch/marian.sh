@@ -92,6 +92,7 @@ import AnchoredHeader    from './components/AnchoredHeader.vue'
 
       <m-project 
         title="Cable simulation in Unity" 
+        link="/unity/unity-xpbd-jakobsen-cable" 
         github="marimilch/unity-xpbd-jakobsen-cable"
         :tags="['csharp', 'unity', 'xpbd', 'simulation']"
         description="An implementation of the XPBD, PBD and Jakobsen algorithm in Unity. My bachelor thesis."
