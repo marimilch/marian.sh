@@ -135,14 +135,6 @@ import AnchoredHeader    from './components/AnchoredHeader.vue'
           <code-appear-project text=" GITHUB↗ "/>
         </m-link>
       </p>
-
-      <br />
-
-      <p>
-        <m-link href="/downloads/Marian Amiragov - CV.pdf" external>
-          <code-appear-project text=" CV↗ "/>
-        </m-link>
-      </p>
     </div>
   </m-frame>
 
