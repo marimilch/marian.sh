@@ -69,7 +69,7 @@ function reset() {
 
 <template>
 <span>
-  <on-visible @on-visible="run" @on-hidden="reset" class="inline">
+  <on-visible @on-visible="run" class="inline">
     <span v-if="!typingStarted" class="placeholder opacity-0 inline-block w-0">
       a
     </span>

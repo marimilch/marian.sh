@@ -23,8 +23,7 @@ import AnchoredHeader    from './components/AnchoredHeader.vue'
         :year="2022"
         :tags="['vue3', 'laravel8', 'tailwind']"
         description="Platform for educational institutes 
-        to request digital devices. Government funded. 
-        Developed backend and frontend in a team."
+        to request digital devices. Government funded."
       />
 
       <m-project 
@@ -32,35 +31,31 @@ import AnchoredHeader    from './components/AnchoredHeader.vue'
         link="https://kandidat.ergo.flynne.de" 
         :year="2021"
         :tags="['vue2', 'laravel8']"
-        description="Trainee application platform.
-        Developed backend API, recruiter 
-        dashboard and the candidate dashboard in a team."
+        description="Trainee application platform."
       />
 
       <m-project 
         title="Brandmonks Media" 
         link="https://bm.media" 
         :year="2020"
-        :tags="['animejs']"
-        description="Agency website.
-        Programmed frontend and effects."
+        :tags="['vue3', 'php']"
+        description="Agency website."
       />
 
       <m-project 
         title="flynne" 
         link="https://flynne.de" 
         :year="2020"
-        :tags="['vue2', 'wordpress', 'laravel5']"
-        description="Applicant tracking system.
-        Developed backend API, recruiter dashboard and landing page in a team."
+        :tags="['vue2', 'laravel5']"
+        description="Applicant tracking system."
       />
 
       <m-project 
         title="TXT Performer" 
         link="https://txtperformer.com" 
-        :tags="['js', 'php', 'vanilla', 'typescript']"
+        :tags="['vue', 'php', 'typescript']"
         :year="2018"
-        description="Text tool. Programmed backend and frontend."
+        description="Text tool."
       />
         
     </div>
@@ -76,11 +71,11 @@ import AnchoredHeader    from './components/AnchoredHeader.vue'
         link="https://marian.sh" 
         github="marimilch/marian.sh"
         description="CV/portfolio as a website."
-        :tags="['vue3', 'animejs', 'typescript', 'docker']"
+        :tags="['vue3', 'typescript']"
         :year="2022"
       />
 
-      <m-project 
+      <!-- <m-project 
         title="marimilch" 
         suffix="de" 
         link="https://marimilch.de" 
@@ -88,21 +83,21 @@ import AnchoredHeader    from './components/AnchoredHeader.vue'
         :tags="['vue2', 'animejs', 'threejs']"
         description="Website for personal games."
         :year="2021"
-      />
+      /> -->
 
       <m-project 
         title="Cable simulation in Unity" 
         link="/unity/unity-xpbd-jakobsen-cable" 
         github="marimilch/unity-xpbd-jakobsen-cable"
-        :tags="['csharp', 'unity', 'xpbd', 'simulation']"
-        description="An implementation of the XPBD, PBD and Jakobsen algorithm in Unity. My bachelor thesis."
+        :tags="['csharp', 'unity', 'simulation']"
+        description="An implementation of the XPBD, PBD and Jakobsen algorithm in C# for Unity. My bachelor thesis."
         :year="2021"
       />
 
       <m-project 
         title="ASCIIRay" 
         github="marimilch/asciiray"
-        :tags="['c', 'vanilla']"
+        :tags="['c']"
         description="A three dimensional cube rotating in your console."
         :year="2019"
       />

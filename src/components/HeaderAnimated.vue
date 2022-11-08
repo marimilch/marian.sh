@@ -35,7 +35,7 @@ let animation = computed( () => {
 </script>
 
 <template>
-  <on-visible @on-hidden="aniMode = 'hide'" @on-visible="aniMode = 'show'">
+  <on-visible @on-visible="aniMode = 'show'">
     <anime :animation="animation" target=".letter">
       <letterize style-each="display: inline-block">
         <slot />

@@ -30,7 +30,7 @@ defineProps<{ id: string }>()
 </script>
 
 <template>
-  <on-visible @on-hidden="aniMode = 'hide'" @on-visible="aniMode = 'show'">
+  <on-visible @on-visible="aniMode = 'show'">
     <anime :animation="animation" target=".letter">
       <h2 :id="id"><span class="relative inline">
         <a 
